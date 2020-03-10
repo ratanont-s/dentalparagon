@@ -1,0 +1,145 @@
+// Banner
+#banner {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .scroll-down {
+        position: absolute;
+        bottom: 12%;
+        margin: 0 auto;
+        color: $light;
+
+        &-icon {
+            width: 1.5em;
+            height: 2.5em;
+            border: 2px solid $light;
+            border-radius: 2em;
+            margin: 0 auto;
+            margin-bottom: 0.5em;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 8px;
+                background-color: $light;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+// Testimonail
+#testimonail {
+    background-color: rgba($primary, .15);
+
+    .card {
+        border-width: 0;
+        border-radius: 1em;
+        overflow: hidden;
+    }
+}
+
+// Services
+#services {
+    .services {
+        &-item {
+            &-bg {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .services {
+            &-item {
+                position: relative;
+
+                &-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc((100% / 12) * 5);
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: right center;
+                }
+
+                &:nth-child(even) {
+                    .services-item-bg {
+                        left: auto;
+                        right: 0;
+                        object-position: left center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Location
+#location {
+    >.container-fluid {
+        @include media-breakpoint-up(md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .map {
+        position: relative;
+
+        .nav {
+            position: absolute;
+            bottom: 2em;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: $box-shadow;
+            border-radius: 10em;
+
+            &-item {
+                &:first-child .nav-link {
+                    border-top-left-radius: 10em;
+                    border-bottom-left-radius: 10em;
+                }
+
+                &:last-child .nav-link {
+                    border-top-right-radius: 10em;
+                    border-bottom-right-radius: 10em;
+                }
+            }
+
+            &-link {
+                background-color: $primary;
+                color: $light;
+                border-radius: 0;
+                text-align: center;
+
+                &.active {
+                    background-color: darken($primary, 15%);
+                }
+            }
+        }
+
+    }
+
+    @include media-breakpoint-up(sm) {
+        .facebook-page {
+            box-shadow: -1rem 0 1rem rgba(black, .15);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .map {
+            .nav-link {
+                min-width: 102px;
+            }
+        }
+    }
+}

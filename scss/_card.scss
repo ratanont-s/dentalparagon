@@ -1,0 +1,29 @@
+// Team
+.card-team {
+    flex-direction: row;
+    border-width: 0;
+    border-radius: 1em;
+    box-shadow: 0 3px 6px rgba($black, .15);
+    overflow: hidden;
+    height: 100%;
+
+    .card {
+
+        &-icon {
+            background-color: rgba($primary, .15);
+            color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.25em;
+        }
+
+        &-subtitle {
+            color: $black;
+        }
+
+        &-title {
+            color: darken($primary, 15%);
+        }
+    }
+}

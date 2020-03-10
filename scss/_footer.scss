@@ -1,0 +1,19 @@
+footer {
+    position: relative;
+    padding-top: 3em;
+    background-color: rgba($primary, .15);
+
+    .footer {
+        &-icon {
+            display: inline-block;
+            min-width: 2em;
+            text-align: center;
+        }
+    }
+
+    .btn-top {
+        position: absolute;
+        top: -1em;
+        right: 2em;
+    }
+}

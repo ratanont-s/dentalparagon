@@ -1,0 +1,7 @@
+.page-header {
+    padding: calc(88px + 3em) 0 3em;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: calc(96px + 3em);
+    }
+}

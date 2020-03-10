@@ -1,0 +1,28 @@
+header {
+    .list-lang {
+        .form-check {
+            &-inline {
+                margin-right: 0.5rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &-input {
+                display: none;
+
+                &:checked~.form-check-label {
+                    opacity: 1;
+                }
+            }
+
+            &-label {
+                width: 1em;
+                height: 1.5em;
+                opacity: 0.5;
+                cursor: pointer;
+            }
+        }
+    }
+}
