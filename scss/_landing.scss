@@ -5,6 +5,22 @@
     justify-content: center;
     align-items: center;
 
+    .banner {
+        &-title {
+            color: $primary;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        &-description {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+        }
+    }
+
     .scroll-down {
         position: absolute;
         bottom: 12%;
@@ -12,12 +28,12 @@
         color: $light;
 
         &-icon {
-            width: 1.5em;
-            height: 2.5em;
+            width: 1.5rem;
+            height: 2.5rem;
             border: 2px solid $light;
-            border-radius: 2em;
+            border-radius: 2rem;
             margin: 0 auto;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.5rem;
             position: relative;
 
             &::before {
@@ -30,6 +46,37 @@
                 height: 8px;
                 background-color: $light;
                 border-radius: 2px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .banner {
+            &-title {
+                @include font-size(100px);
+            }
+
+            &-description {
+                @include font-size(50px);
+            }
+        }
+    }
+}
+
+// About
+#about {
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+
+    .about {
+        &-title {
+            border-left: 4px solid $primary;
+            padding-left: 1rem;
+            @include font-size(40px);
+
+            span {
+                @include font-size(32px);
             }
         }
     }

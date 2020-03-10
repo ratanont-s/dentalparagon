@@ -1,8 +1,15 @@
 // Colors
-// $primary: #E4067F;
+$primary: #E4067F;
 
 // $body-color: #777;
 
 // Font
 $font-family-base: 'Sarabun',
 sans-serif;
+$headings-font-weight: bold;
+$enable-responsive-font-sizes: true;
+
+// Navbar
+$navbar-light-color: rgba($primary, .5);
+$navbar-light-hover-color:rgba($primary, .75);
+$navbar-light-active-color: $primary;

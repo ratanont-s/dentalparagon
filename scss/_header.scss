@@ -1,4 +1,27 @@
 header {
+    .nav {
+        &-link {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .dropdown {
+        &-menu {
+            border-width: 0;
+            border-radius: 1em;
+        }
+
+        &-item {
+            color: $primary;
+
+            @include hover-focus {
+                color: $primary;
+                background-color: rgba($primary, .15);
+            }
+        }
+    }
+
     .list-lang {
         .form-check {
             &-inline {
@@ -22,6 +45,32 @@ header {
                 height: 1.5em;
                 opacity: 0.5;
                 cursor: pointer;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .dropdown {
+            &-menu {
+                box-shadow: $box-shadow;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .nav {
+            &-link {
+                text-align: center;
+            }
+        }
+
+        .dropdown {
+            &-menu {
+                background-color: rgba($primary, .15);
+            }
+
+            &-item {
+                text-align: center;
             }
         }
     }
