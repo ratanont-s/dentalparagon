@@ -65,11 +65,20 @@
 
 // About
 #about {
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: contain;
+
+    >.container {
+        position: relative;
+    }
 
     .about {
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: auto;
+            height: 100%;
+        }
+
         &-title {
             border-left: 4px solid $primary;
             padding-left: 1rem;
@@ -85,6 +94,7 @@
 // Testimonail
 #testimonail {
     background-color: rgba($primary, .15);
+    margin-bottom: 30px;
 
     .card {
         border-width: 0;
@@ -123,6 +133,12 @@
                         left: auto;
                         right: 0;
                         object-position: left center;
+                    }
+                }
+
+                &:nth-child(1) {
+                    .services-item-bg {
+                        object-fit: contain;
                     }
                 }
             }
