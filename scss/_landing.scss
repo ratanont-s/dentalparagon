@@ -65,6 +65,8 @@
 
 // About
 #about {
+    position: relative;
+    overflow-x: hidden;
 
     >.container {
         position: relative;
@@ -77,6 +79,7 @@
             left: 50%;
             width: auto;
             height: 100%;
+            z-index: -1;
         }
 
         &-title {
@@ -86,6 +89,15 @@
 
             span {
                 @include font-size(32px);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .about {
+            &-bg {
+                transform: translateX(-50%);
+                opacity: 0.25;
             }
         }
     }
@@ -205,4 +217,9 @@
             }
         }
     }
+}
+
+// Partners
+#partnaers {
+    // background-color: #F8F9FA;
 }
