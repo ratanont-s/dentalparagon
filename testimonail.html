@@ -813,9 +813,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
         $(function () {
+            $(".card-img").Lazy();
             var $grid = $('.grid').imagesLoaded(function () {
                 // init Masonry after all images have loaded
                 $grid.masonry({
