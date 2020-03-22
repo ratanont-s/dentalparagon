@@ -38,3 +38,30 @@
         border-radius: 10px;
     }
 }
+
+// Service
+.card-service {
+    border-radius: 10px;
+    border-width: 0;
+    background-color: rgba($primary, .15);
+    box-shadow: $box-shadow-sm;
+    text-align: center;
+    @include transition($transition-base);
+
+    &:hover {
+        background-color: rgba($primary, .5);
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+
+        .card-title {
+            color: $white;
+        }
+    }
+
+    .card {
+        &-img {
+            margin-bottom: 1rem;
+            max-height: 150px;
+        }
+    }
+}

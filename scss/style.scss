@@ -9,3 +9,8 @@
 @import './card';
 
 @import './custom';
+
+main {
+    position: relative;
+    overflow-x: hidden;
+}
