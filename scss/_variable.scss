@@ -1,5 +1,8 @@
 // Colors
 $primary: #E4067F;
+$primary-light: rgba($primary, .15);
+
+$theme-colors: ("primary-light": $primary-light);
 
 // $body-color: #777;
 

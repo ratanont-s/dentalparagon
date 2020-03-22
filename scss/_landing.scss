@@ -107,11 +107,67 @@
 #testimonail {
     background-color: rgba($primary, .15);
     margin-bottom: 30px;
+    overflow-x: hidden;
 
     .card {
         border-width: 0;
         border-radius: 1em;
         overflow: hidden;
+
+        &-img {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    .slick {
+        &-arrow {
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+
+            &:not(:hover) {
+                opacity: 0.5;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &-prev {
+            left: -45px;
+            background-image: url('../img/icons/arrow-prev.svg');
+        }
+
+        &-next {
+            right: -45px;
+            background-image: url('../img/icons/arrow-next.svg');
+        }
+
+        &-dots {
+            li {
+                text-align: center;
+
+                &:not(.slick-active) {
+                    opacity: 0.5;
+                }
+            }
+
+            button {
+                background-color: $primary;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                margin: 0 auto;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
