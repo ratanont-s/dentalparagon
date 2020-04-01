@@ -22,30 +22,14 @@ header {
         }
     }
 
-    .list-lang {
-        .form-check {
-            &-inline {
-                margin-right: 0.5rem;
+    .link-lang {
+        img {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
 
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-
-            &-input {
-                display: none;
-
-                &:checked~.form-check-label {
-                    opacity: 1;
-                }
-            }
-
-            &-label {
-                width: 1.25rem;
-                height: 1.25rem;
-                opacity: 0.5;
-                cursor: pointer;
-            }
+        &.active {
+            opacity: 0.5;
         }
     }
 
